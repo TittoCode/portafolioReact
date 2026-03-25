@@ -18,12 +18,11 @@ export function useScrollReveal() {
             observer.observe(el);
         });
 
-        // Cleanup observer on unmount
         return () => {
             elements.forEach((el) => {
                 observer.unobserve(el);
             });
             observer.disconnect();
         };
-    }, []); // Empty array so it runs once after mount
+    }, []);
 }

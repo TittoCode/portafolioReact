@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { NAV_LINKS } from '../data/constants';
 
 export default function Nav({ isDark, toggleTheme }) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,12 +22,11 @@ export default function Nav({ isDark, toggleTheme }) {
                 </a>
 
                 <div className="hidden md:flex items-center space-x-7">
-                    <a href="#inicio" className="text-sm font-medium text-slate-500 hover:text-accent-600 dark:text-slate-400 dark:hover:text-accent-400 transition-colors">Inicio</a>
-                    <a href="#metodologia" className="text-sm font-medium text-slate-500 hover:text-accent-600 dark:text-slate-400 dark:hover:text-accent-400 transition-colors">Metodología</a>
-                    <a href="#trayectoria" className="text-sm font-medium text-slate-500 hover:text-accent-600 dark:text-slate-400 dark:hover:text-accent-400 transition-colors">Trayectoria</a>
-                    <a href="#stack" className="text-sm font-medium text-slate-500 hover:text-accent-600 dark:text-slate-400 dark:hover:text-accent-400 transition-colors">Stack</a>
-                    <a href="#proyectos" className="text-sm font-medium text-slate-500 hover:text-accent-600 dark:text-slate-400 dark:hover:text-accent-400 transition-colors">Proyectos</a>
-                    <a href="#contacto" className="px-4 py-2 bg-accent-600 text-white text-sm rounded-lg font-medium hover:bg-accent-700 transition-all">Contacto</a>
+                    {NAV_LINKS.map(link => (
+                        <a key={link.name} href={link.path} className="text-sm font-medium text-slate-500 hover:text-accent-600 dark:text-slate-400 dark:hover:text-accent-400 transition-colors">
+                            {link.name}
+                        </a>
+                    ))}
                     <button onClick={toggleTheme} className="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 transition-colors focus:outline-none text-sm">
                         {isDark ? <span>☀️</span> : <span>🌙</span>}
                     </button>
@@ -46,12 +46,11 @@ export default function Nav({ isDark, toggleTheme }) {
 
             <div className={`md:hidden absolute w-full left-0 top-full shadow-lg border-t border-slate-100 dark:border-slate-800 transition-all duration-300 bg-white dark:bg-surface-dark ${isMenuOpen ? 'block' : 'hidden'}`}>
                 <div className="flex flex-col space-y-1 p-5">
-                    <a href="#inicio" onClick={() => setIsMenuOpen(false)} className="mobile-link">Inicio</a>
-                    <a href="#metodologia" onClick={() => setIsMenuOpen(false)} className="mobile-link">Metodología</a>
-                    <a href="#trayectoria" onClick={() => setIsMenuOpen(false)} className="mobile-link">Trayectoria</a>
-                    <a href="#stack" onClick={() => setIsMenuOpen(false)} className="mobile-link">Stack</a>
-                    <a href="#proyectos" onClick={() => setIsMenuOpen(false)} className="mobile-link">Proyectos</a>
-                    <a href="#contacto" onClick={() => setIsMenuOpen(false)} className="mobile-link font-semibold text-accent-600 border-none">Contacto</a>
+                    {NAV_LINKS.map(link => (
+                        <a key={link.name} href={link.path} onClick={() => setIsMenuOpen(false)} className="mobile-link">
+                            {link.name}
+                        </a>
+                    ))}
                 </div>
             </div>
         </header>

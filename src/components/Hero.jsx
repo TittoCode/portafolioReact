@@ -1,5 +1,5 @@
-import { useEffect, useRef } from 'react';
 import CanvasBackground from './CanvasBackground';
+import { PERSONAL_INFO, SOCIAL_LINKS } from '../data/constants';
 
 export default function Hero() {
     return (
@@ -10,30 +10,17 @@ export default function Hero() {
             <div className="container mx-auto px-6 grid md:grid-cols-2 gap-16 items-center relative z-10">
                 <div className="order-2 md:order-1 reveal-on-scroll">
                     <span className="font-mono text-[11px] text-accent-600 dark:text-accent-400 tracking-widest uppercase block mb-5">
-                        // arquitectura de software · formación técnica
+                        // {PERSONAL_INFO.title}
                     </span>
 
                     <h1 className="text-4xl md:text-5xl font-bold mb-8 leading-tight text-slate-900 dark:text-slate-100">
-                        Jose Titto<br />
-                        <span className="text-accent-600 dark:text-accent-400">Yampa</span>
+                        {PERSONAL_INFO.name}<br />
+                        <span className="text-accent-600 dark:text-accent-400">{PERSONAL_INFO.lastName}</span>
                     </h1>
 
                     <div className="text-slate-700 dark:text-slate-400 text-[15px] leading-relaxed max-w-lg mb-10">
                         <p>
-                            Desarrollador Frontend especializado en arquitectura modular y claridad estructural. Mi práctica
-                            profesional fusiona la ingeniería de software con la formación técnica, priorizando la{' '}
-                            <span className="has-tooltip font-medium text-slate-900 dark:text-slate-200 border-b border-slate-300 cursor-help">
-                                separación de responsabilidades
-                                <span className="tooltip-content">Arquitectura de desacoplamiento que facilita el testing y la escalabilidad.</span>
-                            </span>{' '}
-                            y el dominio de estándares nativos como{' '}
-                            <span className="has-tooltip font-medium text-slate-900 dark:text-slate-200 border-b border-slate-300 cursor-help">
-                                ES Modules
-                                <span className="tooltip-content">Gestión nativa de dependencias para sistemas modernos.</span>
-                            </span>.
-                            Entiendo la <strong className="font-semibold text-slate-900 dark:text-white">escalabilidad como una
-                            restricción de diseño</strong> que permite equipos colaborativos sin fricción, transformando el
-                            código en un activo estratégico y pedagógico.
+                            {PERSONAL_INFO.description}
                         </p>
                     </div>
 
@@ -41,16 +28,16 @@ export default function Hero() {
                         <a href="#proyectos" className="px-6 py-3 bg-accent-600 text-white rounded-lg font-medium text-sm hover:bg-accent-700 transition-all duration-300 shadow-sm hover:shadow-md">
                             Ver Proyectos
                         </a>
-                        <a href="#metodologia" className="px-6 py-3 border border-slate-300 dark:border-slate-600 text-slate-600 dark:text-slate-300 rounded-lg font-medium text-sm hover:border-accent-500 hover:text-accent-600 dark:hover:text-accent-400 transition-all duration-300">
-                            Estándares de Trabajo
+                        <a href={`/portafolioReact/${SOCIAL_LINKS.cv}`} target="_blank" rel="noopener noreferrer" className="px-6 py-3 border border-slate-300 dark:border-slate-600 text-slate-600 dark:text-slate-300 rounded-lg font-medium text-sm hover:border-accent-500 hover:text-accent-600 dark:hover:text-accent-400 transition-all duration-300">
+                            Descargar CV
                         </a>
                     </div>
 
                     <div className="flex gap-6">
-                        <a href="https://github.com/TittoCode" target="_blank" rel="noopener noreferrer" className="font-mono text-xs text-slate-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors">
+                        <a href={SOCIAL_LINKS.github} target="_blank" rel="noopener noreferrer" className="font-mono text-xs text-slate-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors">
                             github
                         </a>
-                        <a href="https://wa.me/59174059430" target="_blank" rel="noopener noreferrer" className="font-mono text-xs text-slate-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors">
+                        <a href={SOCIAL_LINKS.whatsapp} target="_blank" rel="noopener noreferrer" className="font-mono text-xs text-slate-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors">
                             whatsapp
                         </a>
                     </div>
@@ -72,7 +59,7 @@ export default function Hero() {
 
                         <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-white dark:bg-slate-900 px-4 py-1.5 rounded-full shadow-md border border-slate-100 dark:border-slate-700 whitespace-nowrap">
                             <span className="font-mono text-[11px] text-accent-600 dark:text-accent-400 font-medium tracking-wide">
-                                Junior Dev · Educator
+                                {PERSONAL_INFO.subtitle}
                             </span>
                         </div>
                     </div>

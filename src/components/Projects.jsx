@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import projectsData from '../data/projects.json';
 
 export default function Projects() {
@@ -7,12 +6,12 @@ export default function Projects() {
             <div className="container mx-auto px-6">
                 <div className="max-w-xl mx-auto text-center mb-16 reveal-on-scroll">
                     <span className="font-mono text-[11px] text-accent-600 dark:text-accent-400 tracking-widest uppercase block mb-4">
-                        // arquitectura de proyectos
+                        // proyectos destacados
                     </span>
-                    <h2 className="section-title">Casos de Resolución de Problemas</h2>
+                    <h2 className="section-title">Proyectos</h2>
                     <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed -mt-6">
-                        Cuatro proyectos construidos bajo restricciones reales. Cada entrada
-                        documenta la decisión técnica central, no solo el resultado.
+                        Proyectos reales con código abierto — cada uno resuelve un problema concreto
+                        y está disponible para revisar en GitHub.
                     </p>
                 </div>
 
