@@ -1,0 +1,35 @@
+[
+    {
+        "id": "diagramas-flujo",
+        "title": "DiagramasFlujo — Plataforma Educativa Interactiva",
+        "description": "Plataforma web estática para enseñar lógica de programación a través de diagramas de flujo con animaciones SVG en tiempo real. El desafío central fue sincronizar la ejecución paso a paso de cada algoritmo con el resaltado visual del camino recorrido en el diagrama, sin librerías externas. Se implementaron simuladores interactivos (Par/Impar, Suma 1-100, Mayor de 3, Tablas de Multiplicar) y un sistema de quiz con retroalimentación inmediata, todo en JavaScript ES6+ puro.",
+        "image": "/assets/images/projects/diagramas-flujo.png",
+        "tags": [
+            "HTML5",
+            "Tailwind CSS",
+            "JavaScript ES6+",
+            "SVG"
+        ],
+        "difficulty": "Avanzado",
+        "whyStack": "HTML semántico, Tailwind CSS y JavaScript vanilla sin dependencias: la restricción es deliberada para que el proyecto funcione con un doble clic en index.html y para demostrar que no se necesita un framework para construir experiencias interactivas de calidad en el aula.",
+        "demoUrl": "https://tittocode.github.io/DiagramasFlujo/",
+        "codeUrl": "https://github.com/TittoCode/DiagramasFlujo"
+    },
+    {
+        "id": "portafolio-modular",
+        "title": "portafolioTitto — Arquitectura Modular con Vite",
+        "description": "Este portafolio es en sí mismo un caso de estudio en arquitectura front-end. Se implementó un sistema de carga de componentes HTML asíncrona sobre Vite sin frameworks de UI, demostrando que ES Modules nativos, Intersection Observer y un pipeline de CSS utilitario (Tailwind CSS) son suficientes para construir interfaces de producción mantenibles. Cada módulo tiene una única responsabilidad: el index.html es una concha vacía y los datos de proyectos se separan de la lógica de renderizado.",
+        "image": "/assets/images/projects/diagramas-flujo.png",
+        "tags": [
+            "Vite",
+            "Tailwind CSS",
+            "ES Modules",
+            "IntersectionObserver",
+            "Canvas API"
+        ],
+        "difficulty": "Avanzado",
+        "whyStack": "Vite para HMR y bundling, Tailwind para utilidades CSS sin especificidad arbitraria, y componentes HTML cargados dinámicamente para demostrar separación de responsabilidades sin depender de un framework reactivo. El proyecto enseña arquitectura modular de forma práctica.",
+        "demoUrl": "https://tittocode.github.io/portafolioTitto/",
+        "codeUrl": "https://github.com/TittoCode/portafolioTitto"
+    }
+]

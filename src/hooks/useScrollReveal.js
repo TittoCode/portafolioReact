@@ -1,0 +1,29 @@
+import { useEffect } from 'react';
+
+export function useScrollReveal() {
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            },
+            { threshold: 0.1 }
+        );
+
+        const elements = document.querySelectorAll('.reveal-on-scroll');
+        elements.forEach((el) => {
+            observer.observe(el);
+        });
+
+        // Cleanup observer on unmount
+        return () => {
+            elements.forEach((el) => {
+                observer.unobserve(el);
+            });
+            observer.disconnect();
+        };
+    }, []); // Empty array so it runs once after mount
+}
