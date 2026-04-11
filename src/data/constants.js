@@ -19,9 +19,9 @@ export const NAV_LINKS = [
 export const PERSONAL_INFO = {
     name: 'Jose Titto',
     lastName: 'Yampa',
-    title: 'Desarrollador Web · React · Python · Abierto a oportunidades',
-    subtitle: 'Junior Dev · Open to Work',
-    description: 'Desarrollador web recién egresado, especializado en React y Python. Me apasiona construir interfaces limpias y funcionales, y tengo experiencia enseñando programación — lo que me dio una forma muy clara de entender y explicar código. Busco mi primera oportunidad profesional para seguir creciendo en equipo.',
+    title: 'Desarrollador Web · Php · React · Python',
+    subtitle: 'Junior Dev',
+    description: 'Desarrollador web, especializado en Php,React y Python. Me apasiona construir interfaces limpias y funcionales, y tengo experiencia enseñando programación — lo que me dio una forma muy clara de entender y explicar código. Busco oportunidad profesional para seguir creciendo cómo desarrollador.',
     githubUser: 'TittoCode'
 };
 
@@ -37,30 +37,30 @@ export const SKILLS = [
         category: 'Backend',
         icon: '⚙️',
         items: ['Python', 'PHP', 'Node.js'],
-        level: 'Básico - Intermedio'
+        level: 'Intermedio'
     },
     {
         category: 'Bases de Datos',
         icon: '🗄️',
-        items: ['MySQL', 'SQL Server'],
+        items: ['MySQL', 'PostgreSQL', 'SQLite'],
         level: 'Intermedio'
     },
     {
         category: 'Herramientas',
         icon: '🛠️',
-        items: ['Git', 'GitHub', 'VS Code', 'Vite', 'npm'],
+        items: ['Git', 'GitHub', 'VS Code', 'Antigrabity' 'npm'],
         level: 'Intermedio'
     },
     {
         category: 'Hardware & Soporte',
         icon: '🖥️',
-        items: ['Diagnóstico', 'Mantenimiento', 'Redes', 'Soporte Remoto'],
+        items: ['Diagnóstico', 'Mantenimiento', 'Soporte Remoto'],
         level: 'Básico'
     },
     {
         category: 'Metodología',
         icon: '📐',
-        items: ['Agile', 'Clean Code', 'Git Flow', 'Código Modular'],
+        items: ['Agil', 'Código Modular'],
         level: 'Aplicado en todos los proyectos'
     }
 ];
@@ -120,12 +120,12 @@ export const WORK_APPROACH = [
         title: 'Código Reutilizable',
         iconSvg: '<path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />',
         iconColors: 'text-teal-500 bg-teal-50 dark:bg-teal-900/20',
-        description: 'Divido interfaces en componentes con responsabilidad única. Menos duplicación, más mantenibilidad — funciona igual en React que en proyectos vanilla.'
+        description: 'Divido interfaces en componentes con responsabilidad única. Menos duplicación, más mantenibilidad.'
     }
 ];
 
 export const WORK_STATS = [
-    { value: '3+', label: 'Años enseñando programación' },
+    { value: '2', label: 'Años enseñando programación' },
     { value: '4', label: 'Proyectos en GitHub' },
     { value: '100%', label: 'Código abierto y revisable' }
 ];
